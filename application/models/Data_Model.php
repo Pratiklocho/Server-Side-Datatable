@@ -131,15 +131,15 @@ class Data_Model extends CI_Model {
         $config['protocol'] = "smtp";
         $config['smtp_host'] = "ssl://smtp.googlemail.com";
         $config['smtp_port'] = "465";
-        $config['smtp_user'] = "lochawalapratik5@gmail.com";
-        $config['smtp_pass'] = "locho13pratik";
+        $config['smtp_user'] = "your email address";
+        $config['smtp_pass'] = "your password";
         $config['charset'] = "utf-8";
         $config['mailtype'] = "html";
         $config['newline'] = "\r\n";
 
         $ci->email->initialize($config);
 
-        $ci->email->from("lochawalapratik5@gmail.com", $title);
+        $ci->email->from("email from you send mail", $title);
         $list = array($email);
         $ci->email->to($list);
         $ci->email->subject($subject);
